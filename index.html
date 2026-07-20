@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0b0710" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ka-Blam D10" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Ka-Blam D10</title>
+</head>
+<body>
+  <main class="app" id="app">
+    <section class="home" id="home" aria-label="Lancio del dado">
+      <div class="brand">
+        <p class="eyebrow">CYBER DICE</p>
+        <h1>KA-BLAM</h1>
+        <p class="subtitle">D10 ROLLER</p>
+      </div>
+
+      <button class="die-button" id="rollButton" type="button" aria-label="Lancia il dado da dieci">
+        <span class="die" id="die" aria-hidden="true">
+          <span class="die-face">D10</span>
+        </span>
+      </button>
+
+      <button class="roll-label" id="rollLabel" type="button">LANCIA IL DADO</button>
+      <p class="hint">Tocca il dado</p>
+    </section>
+
+    <section class="result-view" id="resultView" aria-live="polite" hidden>
+      <div class="result-topbar">
+        <div class="result-chip">RISULTATO <strong id="resultNumber">—</strong></div>
+        <button class="close-button" id="closeButton" type="button" aria-label="Chiudi immagine">×</button>
+      </div>
+      <div class="art-frame" id="artFrame">
+        <img id="resultImage" alt="Vignetta di Ka-Blam" />
+        <div class="image-loader" id="imageLoader">CARICAMENTO…</div>
+      </div>
+      <button class="reroll-button" id="rerollButton" type="button">🎲 RILANCIA</button>
+    </section>
+
+    <div class="flash" id="flash" aria-hidden="true"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
